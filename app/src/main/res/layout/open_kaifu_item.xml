@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/open_icon"
+        android:layout_marginRight="5dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+    <TextView
+        android:id="@+id/open_gname"
+        android:layout_toRightOf="@id/open_icon"
+        android:textStyle="bold"
+        android:text="gname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/open_time"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/open_icon"
+        android:layout_below="@id/open_gname"
+        android:text="linkurl"
+        android:textSize="10sp"
+        android:drawableLeft="@mipmap/g_biao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/open_operators"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/open_icon"
+        android:layout_below="@id/open_time"
+        android:text="operators"
+        android:textSize="10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:textSize="18sp"
+        android:text="查看"
+        android:background="@drawable/shape"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/open_area"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

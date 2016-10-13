@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.HotFragment">
+
+    <TextView
+        android:id="@+id/hot_text1"
+        android:text="精品推荐"
+        android:background="#559ca09f"
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:id="@+id/hot_listView"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/hot_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/hot_text2"
+        android:text="热门推荐"
+        android:background="#559ca09f"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/hot_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <GridView
+        android:id="@+id/hot_gridView"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/hot_text2"
+        android:numColumns="3"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="3dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </GridView>
+
+</RelativeLayout>

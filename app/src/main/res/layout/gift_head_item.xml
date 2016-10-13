@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+        android:id="@+id/gift_pagerView"
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
+    </cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager>
+
+    <LinearLayout
+        android:id="@+id/layout_point_container"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/gift_pagerView"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <View
+        android:layout_below="@+id/gift_pagerView"
+        android:id="@+id/split"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+    </View>
+
+</RelativeLayout>

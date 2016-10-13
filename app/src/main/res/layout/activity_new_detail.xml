@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lcy.demo.activity.NewDetailActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/new_detail_rl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#00BB31">
+
+            <ImageView
+                android:id="@+id/new_detail_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@mipmap/back"
+                android:onClick="onClick"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/new_detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="title" />
+
+            <ImageView
+                android:id="@+id/new_detail_share"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:onClick="onClick"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@mipmap/share"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/new_detail_icon"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:layout_below="@+id/new_detail_rl"
+            android:src="@mipmap/def_loading"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <LinearLayout
+            android:layout_alignBottom="@+id/new_detail_icon"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="120dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/new_detail_authorImage"
+                android:scaleType="centerCrop"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/new_detail_desc"
+                android:background="@drawable/special_text"
+                android:textSize="10sp"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <com.example.lcy.demo.view.MyListView
+            android:id="@+id/new_detail_listView"
+            android:layout_below="@+id/new_detail_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.example.lcy.demo.view.MyListView>
+    </RelativeLayout>
+
+</ScrollView>

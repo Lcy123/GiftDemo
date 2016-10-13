@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <com.example.lcy.demo.view.MySlidingPaneLayout
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:padding="15dp"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@mipmap/menu_background"
+            android:orientation="vertical"
+            android:id="@+id/gift_relative_left">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:src="@mipmap/def_loading"
+                android:id="@+id/menu_login"
+                android:scaleType="centerCrop"
+                android:layout_width="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_height="100dp" />
+            <TextView
+                android:layout_marginTop="100dp"
+                android:layout_below="@+id/menu_login"
+                android:drawableLeft="@mipmap/home_gray"
+                android:text="主页"
+                android:gravity="center"
+                android:id="@+id/menu_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/menu_gift"
+                android:layout_below="@+id/menu_home"
+                android:drawableLeft="@mipmap/my_gift"
+                android:text="我的礼包"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_below="@+id/menu_gift"
+                android:id="@+id/menu_about"
+                android:drawableLeft="@mipmap/about_me"
+                android:text="关于我们"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_below="@+id/menu_about"
+                android:id="@+id/menu_set"
+                android:drawableLeft="@mipmap/icon_settings"
+                android:text="设置"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:background="#00BB31"
+                android:id="@+id/relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:id="@+id/gift_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/title_bar_menu" />
+
+                <TextView
+                    android:id="@+id/gift_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="礼包精灵" />
+
+                <TextView
+                    android:id="@+id/gift_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:text="搜索" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/relative_layout"
+                android:layout_above="@+id/gift_line1"
+                android:id="@+id/home_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </RelativeLayout>
+
+            <View
+                android:layout_above="@+id/radioGroup"
+                android:id="@+id/gift_line1"
+                android:background="#00BB31"
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+            </View>
+
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="3dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/home_tab_home_rb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableTop="@drawable/main_bot_gift"
+                    android:gravity="center"
+                    android:scaleType="centerCrop"
+                    />
+
+                <RadioButton
+                    android:id="@+id/home_tab_open_rb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/main_bot_open"
+                    android:gravity="center"
+                    android:scaleType="centerCrop"
+                    />
+
+                <RadioButton
+                    android:id="@+id/home_tab_hot_rb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/main_bot_hot"
+                    android:gravity="center"
+                    android:scaleType="centerCrop"
+                    />
+
+                <RadioButton
+                    android:id="@+id/home_tab_special_rb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/main_bot_special"
+                    android:gravity="center"
+                    android:scaleType="centerCrop"
+                    />
+            </RadioGroup>
+        </RelativeLayout>
+
+    </com.example.lcy.demo.view.MySlidingPaneLayout>
+
+
+
+</RelativeLayout>
+

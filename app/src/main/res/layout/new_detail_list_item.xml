@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/new_detail_list_icon"
+        android:layout_marginRight="5dp"
+        android:src="@mipmap/def_loading"
+        android:scaleType="centerCrop"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+    <TextView
+        android:id="@+id/new_detail_list_gname"
+        android:layout_toRightOf="@id/new_detail_list_icon"
+        android:textStyle="bold"
+        android:text="gname"
+        android:textSize="10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/new_detail_list_type"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/new_detail_list_icon"
+        android:layout_below="@id/new_detail_list_gname"
+        android:text="type"
+        android:textSize="10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/new_detail_list_desc"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/new_detail_list_icon"
+        android:layout_below="@id/new_detail_list_type"
+        android:text="desc"
+        android:singleLine="true"
+        android:textSize="10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:textSize="18sp"
+        android:text="下载"
+        android:id="@+id/new_detail_list_btn"
+        android:background="@drawable/shape"
+        android:layout_marginRight="10dp"
+        android:layout_width="60dp"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_detail_list_size"
+        android:text="size"
+        android:textSize="10sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
